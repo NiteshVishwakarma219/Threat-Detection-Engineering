@@ -1,0 +1,11 @@
+index=wineventlog EventCode=1
+| search Image="*powershell*"
+| table _time, host, user, Image, CommandLine
+| sort - _time
+
+
+
+🧠 Explanation
+Detects PowerShell execution using Sysmon logs
+Displays command-line activity
+Helps identify malicious scripts

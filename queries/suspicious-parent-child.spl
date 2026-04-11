@@ -1,0 +1,10 @@
+index=wineventlog EventCode=1
+| search ParentImage="*cmd.exe*" Image="*powershell.exe*"
+| table _time, host, user, ParentImage, Image, CommandLine
+
+
+
+👉 Detects:
+
+Command Prompt launching PowerShell
+Common attacker technique

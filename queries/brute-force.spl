@@ -1,0 +1,11 @@
+index=wineventlog EventCode=4625
+| stats count by src_ip, user
+| where count > 5
+| sort - count
+
+
+
+🧠 Explanation
+Filters failed login attempts (Event ID 4625)
+Groups by IP & user
+Detects brute force when attempts exceed threshold

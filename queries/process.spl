@@ -1,0 +1,10 @@
+index=wineventlog EventCode=1
+| stats count by Image, user
+| sort - count
+
+
+
+🧠 Explanation
+Lists all processes executed
+Helps identify unusual or rare processes
+Useful for anomaly detection
